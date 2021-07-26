@@ -1,2 +1,50 @@
 @import "node_modules/bootstrap/dist/css/bootstrap.css";
 @import "node_modules/font-awesome/css/font-awesome.css";
+form.container {
+  display: flex !important;
+}
+
+div.container,
+.row-header {
+  max-width: 85%;
+}
+
+.row-header {
+  display: flex;
+  margin: auto;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 150px;
+  color: white;
+  border-bottom: 5px solid rgba(255, 255, 255, 0.733);
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -5px;
+  margin-left: -5px;
+  justify-content: space-evenly !important;
+}
+form.container {
+  display: flex !important;
+  flex-direction: column;
+  max-width: 85%;
+}
+.panel-heading {
+  background: #535353;
+  padding: 15px;
+  border-radius: 0;
+  border-bottom: 5px solid rgba(255, 255, 255, 0.315);
+}
+.panel .panel-heading .btn {
+  color: #fff !important;
+  background-color: #000 !important;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 7px 15px;
+  border: none;
+  border-radius: 0;
+  transition: all 0.3s ease 0s;
+}

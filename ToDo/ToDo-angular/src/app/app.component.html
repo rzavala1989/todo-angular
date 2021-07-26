@@ -1,4 +1,7 @@
-<div class="row">
+<div
+  class="row row-header"
+  style="background-image: linear-gradient(to right, rgb(0, 0, 0) 0%, rgb(67, 67, 67) 51%, rgb(0, 0, 0) 100%);"
+>
   <div class="col-md-2"></div>
   <div class="col-md-16">
     <br />
@@ -8,13 +11,51 @@
     <br />
   </div>
 </div>
-
-<div class="row">
-  <div class="col-md-2"></div>
+<form class="container panel-heading">
+  <div class="form-row">
+    <div class="col-md-3">
+      <input
+        type="text"
+        name="title"
+        id="title"
+        [(ngModel)]="newTask.title"
+        placeholder="Title"
+        class="form-control"
+      />
+    </div>
+    <div class="col-md-3">
+      <input
+        name="description"
+        id="description"
+        [(ngModel)]="newTask.description"
+        placeholder="Description"
+        class="form-control"
+        id="description"
+      />
+    </div>
+    <div class="col-md-3">
+      <input
+        name="type"
+        id="type"
+        [(ngModel)]="newTask.type"
+        placeholder="Type"
+        class="form-control"
+        id="type"
+      />
+    </div>
+    <div class="col-md-1">
+      <button type="submit" class="btn btn-md pull-left" (click)="createTask()">
+        <i class="fa fa-plus-circle"></i>
+        Add task
+      </button>
+    </div>
+  </div>
+</form>
+<div class="container">
   <div class="col-md-16">
     <div class="todos" *ngIf="toDoList">
       <table class="table">
-        <thead class="h">
+        <thead class="thead-dark">
           <tr class="h">
             <th scope="col" class="h">Title</th>
             <th scope="col" class="h">Description</th>
@@ -110,45 +151,5 @@
         </tbody>
       </table>
     </div>
-    <form>
-      <div class="form-row">
-        <div class="col-md-3">
-          <input
-            type="text"
-            name="title"
-            id="title"
-            [(ngModel)]="newTask.title"
-            placeholder="Title"
-            class="form-control"
-          />
-        </div>
-        <div class="col-md-3">
-          <input
-            name="description"
-            id="description"
-            [(ngModel)]="newTask.description"
-            placeholder="Description"
-            class="form-control"
-            id="description"
-          />
-        </div>
-        <div class="col-md-3">
-          <input
-            name="type"
-            id="type"
-            [(ngModel)]="newTask.type"
-            placeholder="Type"
-            class="form-control"
-            id="type"
-          />
-        </div>
-        <div class="col-md-2">
-          <button type="submit" class="btn btn-primary" (click)="createTask()">
-            Add
-          </button>
-        </div>
-      </div>
-    </form>
   </div>
-  <div class="col-md-2"></div>
 </div>
